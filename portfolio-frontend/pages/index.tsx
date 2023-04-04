@@ -71,7 +71,7 @@ export default function Home({
           👋 Hello!
           <div>
             <br />
-            I'm a software engineer based in Seattle, WA with a passion for
+            I&apos;m a software engineer based in Seattle, WA with a passion for
             building unique, engaging, and inclusive user experiences.
           </div>
         </div>
