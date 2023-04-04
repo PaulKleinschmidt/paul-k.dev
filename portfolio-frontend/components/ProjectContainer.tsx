@@ -20,9 +20,9 @@ export const ProjectContainer = ({ project, index }: Props) => {
 
   const content = (
     <div className="">
-      <div className="flex justify-between">
+      <div className="flex mb-2">
         <h2 className="mt-0 text-2xl">{project.title}</h2>
-        <div className="flex mb-8">
+        <div className="flex mt-1 ml-4 justify-between w-10">
           <IconLink IconComponent={Code} url={project.source} />
           {project.url && <IconLink IconComponent={Link} url={project.url} />}
         </div>

@@ -1,16 +1,11 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
-import styles from '@/styles/Home.module.css';
 import client from '@/client';
 import { Experience, Project } from '@/types/sanity-schema';
 import { InferGetStaticPropsType } from 'next';
-import { Codesandbox, GitHub, Linkedin, Mail } from 'react-feather';
+import { Briefcase, Codesandbox, GitHub, Linkedin, Mail } from 'react-feather';
 import { IconLink } from '@/components/IconLink';
 import { ExperienceContainer } from '@/components/ExperienceContainer';
 import { ProjectContainer } from '@/components/ProjectContainer';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({
   experience,
@@ -36,9 +31,9 @@ export default function Home({
         />
       </Head>
 
-      <main className="max-w-xl m-auto mt-20">
-        <div className="flex">
-          <div className="rounded-full relative overflow-hidden w-32 h-32 border-indigo-500 border-2 mx-auto">
+      <main className="max-w-xl m-auto mt-20 px-4 md:px-auto">
+        <div className="md:flex text-center md:text-left">
+          <div className="rounded-full relative overflow-hidden w-32 h-32 border-indigo-500 border-2 mx-auto mb-4 md:mb-0">
             <img
               src="/paul-photo.jpg"
               alt="Photo of Paul"
@@ -48,7 +43,7 @@ export default function Home({
           <div className="mx-8">
             <h1 className="text-4xl font-bold">Paul Kleinschmidt</h1>
             <h2 className="mt-1 text-2xl">Software Engineer</h2>
-            <div className="mt-8 flex">
+            <div className="mt-8 flex justify-center md:justify-start">
               <IconLink
                 IconComponent={Codesandbox}
                 url="https://codesandbox.io/u/PaulKleinschmidt"
@@ -64,6 +59,10 @@ export default function Home({
               <IconLink
                 IconComponent={Mail}
                 url="mailto:paul.kleinschmidt96@gmail.com"
+              />
+              <IconLink
+                IconComponent={Briefcase}
+                url=" https://docs.google.com/document/d/17jYjM9NyFrac9NXrWjwww_Q3Df1tSBtiP0Au2uLWd9s"
               />
             </div>
           </div>
