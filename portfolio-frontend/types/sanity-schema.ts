@@ -80,4 +80,53 @@ export interface Experience extends SanityDocument {
   tech: string;
 }
 
-export type Documents = Experience;
+/**
+ * Project
+ *
+ *
+ */
+export interface Project extends SanityDocument {
+  _type: "project";
+
+  /**
+   * Title — `string`
+   *
+   *
+   */
+  title: string;
+
+  /**
+   * Description — `string`
+   *
+   *
+   */
+  description: string;
+
+  /**
+   * Link to source — `string`
+   *
+   *
+   */
+  source: string;
+
+  /**
+   * URL — `string`
+   *
+   *
+   */
+  url?: string;
+
+  /**
+   * Image — `image`
+   *
+   *
+   */
+  picture: {
+    _type: "image";
+    asset: SanityReference<SanityImageAsset>;
+    crop?: SanityImageCrop;
+    hotspot?: SanityImageHotspot;
+  };
+}
+
+export type Documents = Experience | Project;

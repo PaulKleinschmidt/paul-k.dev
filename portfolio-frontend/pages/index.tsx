@@ -3,16 +3,18 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import client from '@/client';
-import { Experience } from '@/types/sanity-schema';
+import { Experience, Project } from '@/types/sanity-schema';
 import { InferGetStaticPropsType } from 'next';
 import { Codesandbox, GitHub, Linkedin, Mail } from 'react-feather';
 import { IconLink } from '@/components/IconLink';
 import { ExperienceContainer } from '@/components/ExperienceContainer';
+import { ProjectContainer } from '@/components/ProjectContainer';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({
   experience,
+  projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
@@ -83,6 +85,14 @@ export default function Home({
         {experience.map((job) => {
           return <ExperienceContainer key={job._id} experience={job} />;
         })}
+
+        <h1 className="my-8 text-4xl font-bold pt-8">Projects</h1>
+
+        {projects.map((project, i) => {
+          return (
+            <ProjectContainer index={i} key={project._id} project={project} />
+          );
+        })}
       </main>
     </>
   );
@@ -93,9 +103,14 @@ export async function getStaticProps() {
     *[_type == "experience"]
   `);
 
+  const projects: Project[] = await client.fetch(`
+    *[_type == "project"]
+  `);
+
   return {
     props: {
       experience,
+      projects,
     },
   };
 }
