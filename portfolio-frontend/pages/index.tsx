@@ -31,7 +31,7 @@ export default function Home({
         />
       </Head>
 
-      <main className="max-w-xl m-auto mt-20 px-4 md:px-auto">
+      <main className="max-w-2xl m-auto mt-20 px-4 md:px-auto">
         <div className="md:flex text-center md:text-left">
           <div className="rounded-full relative overflow-hidden w-32 h-32 border-indigo-500 border-2 mx-auto mb-4 md:mb-0">
             <img
