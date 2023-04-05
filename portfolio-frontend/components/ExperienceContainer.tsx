@@ -21,7 +21,10 @@ export const ExperienceContainer = ({ experience }: Props) => {
       {experience.title}
       <div>
         {technologies.map((tech) => (
-          <div className="mr-3 bg-indigo-800 p-1 inline-block mt-4 rounded-sm">
+          <div
+            key={tech}
+            className="mr-3 bg-indigo-800 p-1 inline-block mt-4 rounded-sm"
+          >
             {tech.trim()}
           </div>
         ))}
