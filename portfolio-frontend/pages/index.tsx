@@ -72,8 +72,9 @@ export default function Home({
           👋 Hello!
           <div>
             <br />
-            I&apos;m a software engineer based in Seattle, WA with a passion for
-            building unique, engaging, and inclusive user experiences.
+            I&apos;m a software engineer based in Seattle, WA specializing in
+            React + TypeScript development. I enjoy pair programming,
+            collaborating, and creating unique and engaging user experiences.
           </div>
         </div>
 
