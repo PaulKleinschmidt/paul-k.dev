@@ -72,9 +72,10 @@ export default function Home({
           👋 Hello!
           <div>
             <br />
-            I&apos;m a software engineer based in Seattle, WA specializing in
-            React + TypeScript development. I enjoy pair programming,
-            collaborating, and creating unique and engaging user experiences.
+            I&apos;m a software engineer specializing in full stack web
+            development, with a passion for creating unique and engaging user
+            experiences. Lately I've been working with technologies like React,
+            TypeScript, Next.js, Svelte, and Clojure.
           </div>
         </div>
 
