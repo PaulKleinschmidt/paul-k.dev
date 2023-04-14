@@ -74,8 +74,8 @@ export default function Home({
             <br />
             I&apos;m a software engineer specializing in full stack web
             development with a passion for creating unique and engaging user
-            experiences. Lately I've been working with technologies like React,
-            TypeScript, Next.js, Svelte, and Clojure.
+            experiences. Lately I&apos;ve been working with technologies like
+            React, TypeScript, Next.js, Svelte, and Clojure.
           </div>
         </div>
 
